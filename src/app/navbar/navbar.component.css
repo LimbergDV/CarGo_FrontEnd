@@ -1,5 +1,6 @@
 .navbar{
-  background-color: rgb(255, 255, 255);
+  background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(25,255,177,0.6181066176470589) 100%, rgba(252,176,69,1) 100%);
 }
 
 .navbar-start-centered {
