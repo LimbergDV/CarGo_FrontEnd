@@ -4,6 +4,6 @@ export interface Customer {
   last_names:string,
   phone_number: string,
   CURP: string,
-  number_licence: string,
+  number_license: string,
   birthdate?: string
 }

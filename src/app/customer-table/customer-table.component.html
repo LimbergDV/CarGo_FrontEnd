@@ -1,0 +1,30 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Teléfono</th>
+      <th>CURP</th>
+      <th>Número de Licencia</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.id_customer }}</td>
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.last_names }}</td>
+      <td>{{ customer.phone_number }}</td>
+      <td>{{ customer.CURP }}</td>
+      <td>{{ customer.number_license }}</td>
+      <td>{{ customer.birthdate}}</td>
+      <td>
+        <button (click)="actualizarCliente(customer)">Actualizar</button>
+        <button>Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
