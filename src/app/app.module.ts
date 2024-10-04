@@ -17,7 +17,7 @@ import { ViewCustomerComponent } from './view-customer/view-customer.component';
     NavbarComponent,
     FormCustomersComponent,
     CustomerTableComponent,
-    ViewCustomerComponent
+    ViewCustomerComponent,
   ],
   imports: [
     BrowserModule,

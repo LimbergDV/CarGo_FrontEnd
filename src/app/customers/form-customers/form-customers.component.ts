@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../models/customer'; // Ajusta la ruta si es necesario
-import { CustomerService } from '../../../services/customer.service'; // Ajusta la ruta si es necesario
+import { Customer } from '../models/customer';
+import { CustomerService } from '../../../services/customer.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-form-customers',
@@ -8,10 +8,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./form-customers.component.css']
 })
 export class FormCustomersComponent implements OnInit {
-  // Definimos un array de clientes vacío, por si en algún momento necesitas listar clientes
+  // Definimos un array de clientes vacío
   customers: Customer[] = [];
 
-  // Objeto para representar el cliente en el formulario
   custom: Customer = {
     name: '',
     last_names: '',
@@ -24,11 +23,9 @@ export class FormCustomersComponent implements OnInit {
   constructor(private _customerService: CustomerService) {}
 
   ngOnInit(): void {
-    // Aquí no debes llamar a createCustomer; en su lugar, puedes cargar clientes si lo necesitas
     console.log('Formulario inicializado');
   }
 
-  // Método que se llamará al enviar el formulario
   registerCustomer(): void {
     console.log(this.custom)
     console.log('Formulario enviado');
@@ -63,7 +60,6 @@ export class FormCustomersComponent implements OnInit {
     );
   }
 
-  // Método para limpiar el formulario tras enviar los datos
   limpiarFormulario(): void {
     this.custom = {
       name: '',
