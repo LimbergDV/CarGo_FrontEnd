@@ -2,13 +2,13 @@
   <div class="field">
     <label class="label" for="">Nombre:</label>
     <div class="control">
-      <input class="input" type="text" [(ngModel)]="custom.name" placeholder="Escribe tu nombre" required>
+      <input class="input" type="text" [(ngModel)]="custom.name" placeholder="Escribe tu nombre" maxlength="35" required>
     </div>
 
   <div class="field">
     <label class="label">Apellidos:</label>
     <div class="control">
-      <input class="input" type="text" [(ngModel)]="custom.last_names" placeholder="Escribe tus apellidos" required>
+      <input class="input" type="text" [(ngModel)]="custom.last_names" placeholder="Escribe tus apellidos" maxlength="45" required>
     </div>
   </div>
 
