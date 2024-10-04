@@ -9,6 +9,9 @@ import { CustomerTableComponent } from './customer-table/customer-table.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ViewCustomerComponent } from './view-customer/view-customer.component';
+import { ViewCarsComponent } from './view-cars/view-cars.component';
+import { FormCarComponent } from './cars/form-car/form-car.component';
+import { CarsTableComponent } from './cars-table/cars-table.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { ViewCustomerComponent } from './view-customer/view-customer.component';
     FormCustomersComponent,
     CustomerTableComponent,
     ViewCustomerComponent,
+    ViewCarsComponent,
+    FormCarComponent,
+    CarsTableComponent,
   ],
   imports: [
     BrowserModule,
