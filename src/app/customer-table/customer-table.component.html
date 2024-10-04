@@ -23,9 +23,9 @@
       <td>{{ customer.number_license }}</td>
       <td>{{ customer.birthdate}}</td>
       <td>
-        <button (click)="actualizarCliente(customer)">Actualizar</button>
+        <button class="button btn-update" (onClick)="actualizarCliente(customer)">Actualizar</button>
         <td>
-        <button>Eliminar</button>
+        <button class="button btn-delete">Eliminar</button>
       </td>
     </tr>
   </tbody>
