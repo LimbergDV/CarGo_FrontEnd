@@ -10,6 +10,7 @@
       <th>Número de Licencia</th>
       <th>Fecha de Nacimiento</th>
       <th>Acciones</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,7 @@
       <td>{{ customer.birthdate}}</td>
       <td>
         <button (click)="actualizarCliente(customer)">Actualizar</button>
+        <td>
         <button>Eliminar</button>
       </td>
     </tr>

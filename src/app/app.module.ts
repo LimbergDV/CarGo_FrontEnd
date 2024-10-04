@@ -8,6 +8,7 @@ import { FormCustomersComponent } from './customers/form-customers/form-customer
 import { CustomerTableComponent } from './customer-table/customer-table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ViewCustomerComponent } from './view-customer/view-customer.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     FormCustomersComponent,
-    CustomerTableComponent
+    CustomerTableComponent,
+    ViewCustomerComponent
   ],
   imports: [
     BrowserModule,
