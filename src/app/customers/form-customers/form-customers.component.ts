@@ -30,13 +30,13 @@ export class FormCustomersComponent implements OnInit {
     console.log(this.custom)
     console.log('Formulario enviado');
     console.log('Valores del formulario:');
-    console.log('Trainer ID:', this.custom.id_customer);
-    console.log('Team Name:', this.custom.name);
-    console.log('Creation Date:', this.custom.last_names);
-    console.log('Battle Points:', this.custom.phone_number);
-    console.log('Description:', this.custom.CURP);
-    console.log('Total Pokémon:', this.custom.number_license);
-    console.log('Total Pokémon:', this.custom.birthdate);
+    console.log('id_custome:', this.custom.id_customer);
+    console.log('Name:', this.custom.name);
+    console.log('last_names:', this.custom.last_names);
+    console.log('phone_number:', this.custom.phone_number);
+    console.log('CURP:', this.custom.CURP);
+    console.log('number_license', this.custom.number_license);
+    console.log('birthdate', this.custom.birthdate);
 
     this._customerService.createCustomer(this.custom).subscribe(
       (response: Customer) => {
