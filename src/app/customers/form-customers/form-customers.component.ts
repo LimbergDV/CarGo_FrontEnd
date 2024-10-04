@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../models/customer'; // Ajusta la ruta si es necesario
 import { CustomerService } from '../../../services/customer.service'; // Ajusta la ruta si es necesario
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-form-customers',
   templateUrl: './form-customers.component.html',
@@ -46,6 +46,16 @@ export class FormCustomersComponent implements OnInit {
         console.log('Cliente registrado:', response);
         this.customers.push(response);
         this.limpiarFormulario();
+
+
+        Swal.fire({
+          icon: 'success',
+          title: '¡Registro exitoso!',
+          text: 'El cliente ha sido registrado correctamente.',
+          showConfirmButton: false,
+          timer: 1500
+        });
+
       },
       (error) => {
         console.log('Error al registrar el cliente:', error);
