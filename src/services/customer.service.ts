@@ -9,26 +9,26 @@ import { Customer } from '../app/customers/models/customer';
 export class CustomerService {
   private _apiUrl = 'http://localhost:3000/customer';
 
-  constructor(private hhtp: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   //Métodos para el crud completo de CUSTOMERS
 
   createCustomer(customer: Customer): Observable<Customer>{
     console.log(customer);
 
-    return this.hhtp.post<Customer>(`${this._apiUrl}/addCustomer`, customer);
+    return this.http.post<Customer>(`${this._apiUrl}/addCustomer`, customer);
   }
 
   getAllCustomers(): Observable<Customer[]>{
-    return this.hhtp.get<Customer[]>(`${this._apiUrl}/getCustomers`);
+    return this.http.get<Customer[]>(`${this._apiUrl}/getCustomers`);
   }
 
   updateCustomer(customer:Customer): Observable<Customer>{
-    return this.hhtp.put<Customer>(`${this._apiUrl}/updateCustomer/${customer.id_customer}`, customer);
+    return this.http.put<Customer>(`${this._apiUrl}/updateCustomer/${customer.id_customer}`, customer);
   }
 
   deleteCustomer(id:number): Observable<void>{
-    return this.hhtp.delete<void>(`${this._apiUrl}/deleteCustomer/${id}`);
+    return this.http.delete<void>(`${this._apiUrl}/deleteCustomer/${id}`);
   }
 
 }

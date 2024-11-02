@@ -27,6 +27,19 @@ export class FormCarComponent {
   }
 
   registerCar(): void{
+
+    if(!this.car.brand || !this.car.model || !this.car.year || !this.car.type_car || !this.car.plate_number){
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Por favor, completa todos los campos obligatorios.',
+        showConfirmButton: true
+      })
+      //Para salir del método si es que hay campos vacíos :p
+      return;
+    }
+
+
     console.log(this.car);
     console.log('Formulario enviado');
     console.log('Valores del formulario:');

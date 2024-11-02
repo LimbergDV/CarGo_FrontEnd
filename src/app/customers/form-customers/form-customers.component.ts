@@ -34,6 +34,7 @@ export class FormCustomersComponent implements OnInit {
         text: 'Por favor, completa todos los campos obligatorios.',
         showConfirmButton: true
       });
+      //Para salir del método si es que hay campos vacíos :p
       return;
     }
     console.log(this.custom)

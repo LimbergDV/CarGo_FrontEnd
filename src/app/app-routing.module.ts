@@ -5,7 +5,8 @@ import { ViewCarsComponent } from './cars/view-cars/view-cars.component';
 
 const routes: Routes = [
   {path:'Clientes', component:ViewCustomerComponent},
-  {path:'Autos', component: ViewCarsComponent}
+  {path:'Autos', component: ViewCarsComponent},
+  {path: 'Rentas', component: ViewCarsComponent},
 ];
 
 @NgModule({

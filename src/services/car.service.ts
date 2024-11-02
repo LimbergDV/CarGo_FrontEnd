@@ -9,24 +9,24 @@ import { Observable } from 'rxjs';
 export class CarService {
   private _apiUrl = 'http://localhost:3000/car';
 
-  constructor(private hhtp: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   //Métodos para el crud completo de CARS
 
   createCar(car: Car):Observable<Car>{
     console.log(car);
-    return this.hhtp.post<Car>(`${this._apiUrl}/addCar`, car);
+    return this.http.post<Car>(`${this._apiUrl}/addCar`, car);
   }
 
   getAllCars():Observable<Car[]>{
-    return this.hhtp.get<Car[]>(`${this._apiUrl}/getCars`);
+    return this.http.get<Car[]>(`${this._apiUrl}/getCars`);
   }
 
   updateCars(car:Car):Observable<Car>{
-    return this.hhtp.put<Car>(`${this._apiUrl}/updateCar/${car.id_car}`, car);
+    return this.http.put<Car>(`${this._apiUrl}/updateCar/${car.id_car}`, car);
   }
 
   deleateCar(id:number): Observable<void>{
-    return this.hhtp.delete<void>(`${this._apiUrl}/deleteCar/${id}`);
+    return this.http.delete<void>(`${this._apiUrl}/deleteCar/${id}`);
   }
 }
