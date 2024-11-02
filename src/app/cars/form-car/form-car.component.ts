@@ -17,7 +17,8 @@ export class FormCarComponent {
     model:'',
     year:0,
     type_car:'',
-    plate_number:''
+    plate_number:'',
+    price_day: 0
   };
 
   constructor(private _carService: CarService){}
@@ -28,7 +29,7 @@ export class FormCarComponent {
 
   registerCar(): void{
 
-    if(!this.car.brand || !this.car.model || !this.car.year || !this.car.type_car || !this.car.plate_number){
+    if(!this.car.brand || !this.car.model || !this.car.year || !this.car.type_car || !this.car.plate_number || !this.car.price_day){
       Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -78,6 +79,7 @@ export class FormCarComponent {
       year: 0,
       type_car: '',
       plate_number: '',
+      price_day: 0,
 
     };
   }

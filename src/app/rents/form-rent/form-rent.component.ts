@@ -20,8 +20,8 @@ export class FormRentComponent implements OnInit {
     id_customer: 0,
     id_rent: 0,
     id_car: 0,
-    start_date: new Date(),
-    end_date: new Date(),
+    start_date: '',
+    end_date: '',
     total_price: 0,
   };
 
@@ -75,8 +75,8 @@ export class FormRentComponent implements OnInit {
       id_customer: 0,
       id_rent: 0,
       id_car: 0,
-      start_date: new Date(),
-      end_date: new Date(),
+      start_date: '',
+      end_date: '',
       total_price: 0,
     };
   }

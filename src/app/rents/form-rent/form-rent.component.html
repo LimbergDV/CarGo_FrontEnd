@@ -1,7 +1,7 @@
 <div class="container-form-rents">
 <form (ngSubmit)="rentCar()">
   <div class="field">
-    <label class="label" for="">Customer:</label>
+    <label class="label" for="">Cliente:</label>
     <div class="select is-normal control">
       <select id="customer" [(ngModel)]="rent.id_customer" name="customerId" required>
         <option *ngFor="let customer of customers" [value]="customer.id_customer">
@@ -12,7 +12,7 @@
   </div>
 
   <div class="field">
-    <label class="label" for="">Car:</label>
+    <label class="label" for="">Carrro:</label>
     <div class="select is-normal">
       <select id="car" [(ngModel)]="rent.id_car" name="carId" required>
         <option *ngFor="let car of cars" [value]="car.id_car">
@@ -24,12 +24,12 @@
   </div>
 
   <div class="field">
-    <label class="label" for="">Start Date:</label>
+    <label class="label" for="">Fecha de inicio:</label>
     <input type="date" id="startDate" [(ngModel)]="rent.start_date" name="startDate" required />
   </div>
 
   <div class="field">
-    <label class="label" for="">End Date:</label>
+    <label class="label" for="">Fecha de entrega:</label>
     <input type="date" id="endDate" [(ngModel)]="rent.end_date" name="endDate" required />
   </div>
 
