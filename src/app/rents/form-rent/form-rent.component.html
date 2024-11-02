@@ -1,1 +1,38 @@
-<p>form-rent works!</p>
+<div class="container-form-rents">
+<form (ngSubmit)="rentCar()">
+  <div class="field">
+    <label class="label" for="">Customer:</label>
+    <div class="select is-normal control">
+      <select id="customer" [(ngModel)]="rent.id_customer" name="customerId" required>
+        <option *ngFor="let customer of customers" [value]="customer.id_customer">
+          {{ customer.name }} {{ customer.last_names }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="">Car:</label>
+    <div class="select is-normal">
+      <select id="car" [(ngModel)]="rent.id_car" name="carId" required>
+        <option *ngFor="let car of cars" [value]="car.id_car">
+          {{ car.model }} - {{ car.plate_number }}
+        </option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <label class="label" for="">Start Date:</label>
+    <input type="date" id="startDate" [(ngModel)]="rent.start_date" name="startDate" required />
+  </div>
+
+  <div class="field">
+    <label class="label" for="">End Date:</label>
+    <input type="date" id="endDate" [(ngModel)]="rent.end_date" name="endDate" required />
+  </div>
+
+  <button class="button" type="submit">Rent Car</button>
+</form>
+</div>
