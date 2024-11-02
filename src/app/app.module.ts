@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormCustomersComponent } from './customers/form-customers/form-customers.component';
-import { CustomerTableComponent } from './customer-table/customer-table.component';
+import { CustomerTableComponent } from './customers/customer-table/customer-table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ViewCustomerComponent } from './view-customer/view-customer.component';
-import { ViewCarsComponent } from './view-cars/view-cars.component';
+import { ViewCustomerComponent } from './customers/view-customer/view-customer.component';
+import { ViewCarsComponent } from './cars/view-cars/view-cars.component';
 import { FormCarComponent } from './cars/form-car/form-car.component';
-import { CarsTableComponent } from './cars-table/cars-table.component';
+import { CarsTableComponent } from './cars/cars-table/cars-table.component';
 
 
 @NgModule({
@@ -19,8 +19,8 @@ import { CarsTableComponent } from './cars-table/cars-table.component';
     AppComponent,
     NavbarComponent,
     FormCustomersComponent,
-    CustomerTableComponent,
     ViewCustomerComponent,
+    CustomerTableComponent,
     ViewCarsComponent,
     FormCarComponent,
     CarsTableComponent,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Car } from '../cars/models/car';
-import { CarService } from '../../services/car.service';
+import { Car } from '../models/car';
+import { CarService } from '../../../services/car.service';;
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-cars-table',

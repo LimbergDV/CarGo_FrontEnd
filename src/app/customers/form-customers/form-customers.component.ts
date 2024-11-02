@@ -27,6 +27,15 @@ export class FormCustomersComponent implements OnInit {
   }
 
   registerCustomer(): void {
+    if(!this.custom.name || !this.custom.last_names || !this.custom.phone_number || !this.custom.CURP || !this.custom.number_license || !this.custom.birthdate){
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Por favor, completa todos los campos obligatorios.',
+        showConfirmButton: true
+      });
+      return;
+    }
     console.log(this.custom)
     console.log('Formulario enviado');
     console.log('Valores del formulario:');
