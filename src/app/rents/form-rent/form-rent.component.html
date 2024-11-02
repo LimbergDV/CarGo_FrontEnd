@@ -12,25 +12,31 @@
   </div>
 
   <div class="field">
-    <label class="label" for="">Carrro:</label>
+    <label class="label" for="">Carro:</label>
     <div class="select is-normal">
-      <select id="car" [(ngModel)]="rent.id_car" name="carId" required>
+      <select id="car" [(ngModel)]="rent.id_car" name="carId" required (change)="onCarSelected($event)">
         <option *ngFor="let car of cars" [value]="car.id_car">
-          {{ car.model }} - {{ car.plate_number }}
+          {{ car.model }} - {{ car.price_day }} por día
         </option>
       </select>
     </div>
-
   </div>
 
   <div class="field">
     <label class="label" for="">Fecha de inicio:</label>
-    <input type="date" id="startDate" [(ngModel)]="rent.start_date" name="startDate" required />
+    <input type="date" id="startDate" [(ngModel)]="rent.start_date" (change)="onDateChange()"  name="startDate" required />
   </div>
 
   <div class="field">
     <label class="label" for="">Fecha de entrega:</label>
-    <input type="date" id="endDate" [(ngModel)]="rent.end_date" name="endDate" required />
+    <input type="date" id="endDate" [(ngModel)]="rent.end_date" (change)="onDateChange()" name="endDate" required />
+  </div>
+
+  <div class="field">
+    <label class="label">Precio Total:</label>
+    <div class="control">
+      <input type="text" [(ngModel)]="rent.total_price" name="total_price" readonly />
+    </div>
   </div>
 
   <button class="button" type="submit">Rent Car</button>
