@@ -27,3 +27,7 @@ button{
 select{
   width: 70vh;
 }
+
+.control input{
+  width: 70vh;
+}

@@ -16,15 +16,15 @@ export class RentService {
   }
 
   getAllRents(): Observable<Rent[]>{
-    return this.http.get<Rent[]>(`${this._apiUrl}/getRents`)
+    return this.http.get<Rent[]>(`${this._apiUrl}/getAllRents`)
   }
 
   updateRent(rent: Rent): Observable<Rent>{
     return this.http.put<Rent>(`${this._apiUrl}/updateRent/ ${rent.id_rent}`, rent)
   }
 
-  deleateRent(id: number): Observable<void>{
-    return this.http.delete<void>(`${this._apiUrl}/deleteCar/${id}`)
+  deleteRent(id: number): Observable<void>{
+    return this.http.delete<void>(`${this._apiUrl}/deleteRent/${id}`)
   }
 
 }
