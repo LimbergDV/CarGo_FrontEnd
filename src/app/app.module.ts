@@ -12,6 +12,9 @@ import { ViewCustomerComponent } from './customers/view-customer/view-customer.c
 import { ViewCarsComponent } from './cars/view-cars/view-cars.component';
 import { FormCarComponent } from './cars/form-car/form-car.component';
 import { CarsTableComponent } from './cars/cars-table/cars-table.component';
+import { RentsTableComponent } from './rents/rents-table/rents-table.component';
+import { FormRentComponent } from './rents/form-rent/form-rent.component';
+import { ViewRentsComponent } from './rents/view-rents/view-rents.component';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import { CarsTableComponent } from './cars/cars-table/cars-table.component';
     ViewCarsComponent,
     FormCarComponent,
     CarsTableComponent,
+    RentsTableComponent,
+    FormRentComponent,
+    ViewRentsComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@
       <th>Año</th>
       <th>Tipo de carro</th>
       <th>Número de Placa</th>
+      <th>Precio por día</th>
       <th>Acciones</th>
       <th></th>
     </tr>
@@ -20,6 +21,7 @@
       <td>{{ car.year }}</td>
       <td>{{ car.type_car}}</td>
       <td>{{ car.plate_number }}</td>
+      <td>{{ car.price_day }}</td>
       <td>
         <button class="button btn-update" (click)="seleccionarCarro(car)">Actualizar</button>
         <td>
@@ -37,6 +39,7 @@
     <input class="input" [(ngModel)]="selectedCar.year" name="year" placeholder="Año" required />
     <input class="input" [(ngModel)]="selectedCar.type_car" name="type_car" placeholder="Tipo de carro" required />
     <input class="input" [(ngModel)]="selectedCar.plate_number" name="plate_number" placeholder="Número de placa" required />
+    <input class="input" [(ngModel)]="selectedCar.price_day" name="price_day" placeholder="Precio por día" required />
     <button class="button accept-changes-customer" type="submit">Guardar Cambios</button>
     <button class="button cancel-changes-customer" type="button" (click)="selectedCar = null; selectedCar = null">Cancelar</button>
   </form>
