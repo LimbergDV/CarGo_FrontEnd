@@ -7,7 +7,7 @@ import { Rent } from '../app/rents/models/rent';
   providedIn: 'root'
 })
 export class RentService {
-  private _apiUrl = 'http://localhost:3000/rent';
+  private _apiUrl = 'http://50.19.191.204/rent';
 
   constructor(private http: HttpClient) { }
 
